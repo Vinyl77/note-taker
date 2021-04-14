@@ -38,12 +38,12 @@ function writeNote (){
    
 }
 // routes to the home page and the notes page
-app.get("/notes", function (req, res){
-    res.sendFile(path.join (__dirname + "/public/notes.html"));
-});
-app.get("*", function(req, res){
-    res.sendFile(path.join(__dirname + "/public/index.html"));
-})
+// app.get("/notes", function (req, res){
+    // res.sendFile(path.join (__dirname + "/public/notes.html"));
+// });
+// app.get("*", function(req, res){
+    // res.sendFile(path.join(__dirname + "/public/index.html"));
+// })
 
 
 
@@ -90,11 +90,11 @@ app.delete("/api/notes/:id", function (req, res){
 
 
 
-
-    // app.get("/notes", function (req, res){
-        // res.sendFile(path.join (__dirname + "/public/notes.html"));
-    // });
-    // app.get("*", function(req, res){
-        // res.sendFile(path.join(__dirname + "/public/index.html"));
-    // })
+// // routes to the home page and the notes page
+    app.get("/notes", function (req, res){
+        res.sendFile(path.join (__dirname + "/public/notes.html"));
+    });
+    app.get("*", function(req, res){
+        res.sendFile(path.join(__dirname + "/public/index.html"));
+    })
 app.listen(PORT, ()=> console.log(`App listening on PORT ${PORT}`))
