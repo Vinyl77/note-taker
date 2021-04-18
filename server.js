@@ -46,7 +46,7 @@ function writeNote (){
 // })
 
 
-
+// api routes
 // gets the data from api and puts them on the homepage in JSON
 app.get("/api/notes", function (req,res){
     res.json(notesData);
@@ -82,10 +82,13 @@ app.delete("/api/notes/:id", function (req, res){
 
     notesData.splice(index, 1);
 
+
     
 
     fs.writeFileSync('./db/db.json', JSON.stringify(notesData), 'utf8');
+
     res.json("Note Deleted");
+    
   });
 
 
